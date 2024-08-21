@@ -30,18 +30,33 @@
 этого Петя делает две подсказки. Он называет сумму этих чисел S и их
 произведение P. Помогите Кате отгадать задуманные Петей числа.
 """
+#
+# s = int(input())
+# p = int(input())
+#
+# x1 = (s + (s ** 2 - 4 *p)**(1/2))/2
+# x2 = (s - (s ** 2 - 4 *p)**(1/2))/2
+#
+# if x1.is_integer():
+#     print(int(x1))
+#     print(int(s - x1))
+# elif x2.is_integer():
+#     print(int(x2))
+#     print(int(s - x2))
+# else:
+#     print('таких чисел нет')
 
-s = int(input())
-p = int(input())
+# Задача 3
 
-x1 = (s + (s ** 2 - 4 *p)**(1/2))/2
-x2 = (s - (s ** 2 - 4 *p)**(1/2))/2
+"""
+ Требуется вывести все целые степени двойки (т.е. числа
+вида 2^k), не превосходящие числа N.
+"""
 
-if x1.is_integer():
-    print(int(x1))
-    print(int(s - x1))
-elif x2.is_integer():
-    print(int(x2))
-    print(int(s - x2))
-else:
-    print('таких чисел нет')
+num = int(input())
+count = 1
+print(1)
+while count < num:
+    count *= 2
+    if count < num:
+        print(count)
