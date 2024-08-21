@@ -7,19 +7,41 @@
 количество монет, которые нужно перевернуть.
 """
 
-count = int(input())
-g = 0
-r = 0
-for i in range(count):
-    m = int(input())
-    if m == 1:
-        g += 1
-    else:
-        r += 1
-if g > r:
-    print(r)
-else:
-    print(g)
+# count = int(input())
+# g = 0
+# r = 0
+# for i in range(count):
+#     m = int(input())
+#     if m == 1:
+#         g += 1
+#     else:
+#         r += 1
+# if g > r:
+#     print(r)
+# else:
+#     print(g)
 
 # Задача 2
 
+"""
+Петя и Катя – брат и сестра. Петя – студент, а Катя –
+школьница. Петя помогает Кате по математике. Он задумывает два
+натуральных числа X и Y (X,Y≤1000), а Катя должна их отгадать. Для
+этого Петя делает две подсказки. Он называет сумму этих чисел S и их
+произведение P. Помогите Кате отгадать задуманные Петей числа.
+"""
+
+s = int(input())
+p = int(input())
+
+x1 = (s + (s ** 2 - 4 *p)**(1/2))/2
+x2 = (s - (s ** 2 - 4 *p)**(1/2))/2
+
+if x1.is_integer():
+    print(int(x1))
+    print(int(s - x1))
+elif x2.is_integer():
+    print(int(x2))
+    print(int(s - x2))
+else:
+    print('таких чисел нет')
